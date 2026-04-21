@@ -3,14 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuActions : MonoBehaviour
 {
-    public GameObject endGameMenu;
 
     public void IniciaJogo()
     {
-        GameController.Init();
+        // MUITO IMPORTANTE: Destrava o tempo antes de carregar a cena
+        Time.timeScale = 1f; 
         SceneManager.LoadScene(1);
     }
-
+    
     public void Menu()
     {
         SceneManager.LoadScene(0);
